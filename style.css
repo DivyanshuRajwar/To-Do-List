@@ -1,0 +1,185 @@
+.gochi-hand-regular {
+    font-family: "Gochi Hand", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100vw;
+    height: 100vh;
+    user-select: none;
+}
+.wrapper{
+    width: 100%;
+    height: 100%;
+    background-color: #124076;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.toDoContainer{
+    width: 40%;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 35px;
+    gap: 15px;
+    
+    /* height: 50%; */
+    /* /* background-color: #2d9496ad; */
+    box-shadow: 0 0 30px #0000008d; 
+}
+.todo_headder{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.todo_headder h3{
+    font-size: 25px;
+    font-weight: bolder;
+    font-family: "Gochi Hand", cursive;
+}
+.assign_task{
+    display: flex;
+    justify-content: space-around;
+    gap: 25px;
+}
+.assign_task input{
+    width: 250px;
+    height: 50px;
+    border-radius: 5px;
+    padding: 10px;
+    border:none;
+    box-shadow:0 0 5px #000 ;
+    font-family: "Gochi Hand", cursive;
+    font-size: 22px;
+    font-weight: bold;
+}
+.addbtn{
+    width: 40%;
+    height: 45px;
+    font-size: 22px;
+    font-weight: bold;
+    background: transparent;
+    position: relative;   
+    background-color: #3cceeb;
+    transition: all 0.3s ease-in;
+    border: none;
+    font-family: "Gochi Hand", cursive;
+    cursor: pointer;
+}
+.addbtn:hover{
+    color: #fff;
+    background-color: #0e459d;
+    font-size:24px ;
+    font-weight: bold;
+}
+.addbtn::before{
+    content: '';
+    width: 95%;
+    height: 45px;
+    position: absolute;
+    background-color: transparent;
+    border: 3px solid rgb(61, 61, 63);
+    top: 4px;
+    left: -7px;
+    /* z-index: 0; */
+    
+}
+
+ul li{
+    list-style: none;
+    font-size: 25px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    font-family: "Gochi Hand", cursive;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    /* background-image: url(circle.jpeg); */
+    background-image: url(unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 16px;
+    left: 8px;
+} 
+ul li.checked{
+    color: #555;
+    text-decoration:line-through ;
+}
+ul li.checked::before{
+    background-image: url(verification.png);
+
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 45px;
+    height: 45px;
+    font-size: 40px;
+    color: #555 ;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+ul li span:hover{
+    background-color: #edeef0;
+}
+.media_btn{
+    /* visibility: hidden; */
+    display: none;
+}
+@media (max-width: 600px) {
+    body{
+        overflow: hidden;
+        width: 100vw;
+        height: 100vh;
+    }
+    .wrapper {
+        width: 100%;
+        height: 100%;
+    }
+    .toDoContainer{
+        width: 80%;
+    }
+    .assign_task{
+        display: flex;
+        flex-direction: column;
+    }
+    .assign_task input{
+        position: relative;
+        border-radius: 25px;
+        width: 260px;
+    }
+    .addbtn{
+        /* visibility: hidden; */
+        display: none;
+    }
+    .media_btn{
+        position: absolute;
+        display: inline-block;
+        width: 80px;
+        height: 50px;
+        right: 50px;
+        border-radius: 25px;
+        background-color: #0e459d;
+        color: #fff;
+        border: none;
+        font-size: 19px;
+        font-family: "Gochi Hand", cursive;
+        font-weight: 400;
+    }
+}
