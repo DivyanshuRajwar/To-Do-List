@@ -1,16 +1,13 @@
 # Todo App
 
 ## Description
-This project is a simple Todo App built using HTML, CSS, and JavaScript. It allows users to add tasks, delete tasks, and mark tasks as completed once they are done.
+This project is a simple Todo App built using HTML, CSS, and JavaScript. It allows users to add tasks, delete tasks, mark tasks as completed, and saves tasks using local storage.
 
 ## Features
 - Add tasks: Users can add new tasks to their list.
 - Delete tasks: Tasks can be deleted individually.
 - Mark tasks as completed: Completed tasks can be marked to keep track of progress.
-
-## Installation
-1. Clone the repository: git clone https://github.com/your-username/todo-app.git
-2. Open index.html in your web browser.
+- Local Storage: Tasks are saved locally so they persist even after closing the browser.
 
 ## Usage
 - Add Task:
@@ -25,5 +22,3 @@ This project is a simple Todo App built using HTML, CSS, and JavaScript. It allo
 ## Contributing
 Feel free to contribute to the project by forking the repository and submitting a pull request.
 
-## License
-This project is licensed under the [MIT License](LICENSE).
